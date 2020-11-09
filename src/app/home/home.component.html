@@ -6,7 +6,7 @@
     <div>
       <button *ngIf="userService.loggedUser.role === role" mat-flat-button color="primary" (click)="promeniRegProv()">Register</button>
       <button mat-flat-button color="primary" (click)="Logout()">Logout <mat-icon>logout</mat-icon></button>
-    </div>
+    </div>\ 
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
