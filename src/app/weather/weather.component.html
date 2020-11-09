@@ -1,0 +1,11 @@
+<mat-sidenav-content> 
+    <mat-form-field appearance="fill">
+      <mat-label>Grad:</mat-label>
+      <input matInput placeholder="Grad" type="text" [(ngModel)]="pretraga">
+    </mat-form-field>
+    <button mat-icon-button (click)="pretrazi()"><mat-icon>search</mat-icon></button>
+
+    <div *ngIf="vreme">
+        {{vreme}}
+    </div>    
+  </mat-sidenav-content>

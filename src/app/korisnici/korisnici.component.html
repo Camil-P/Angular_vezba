@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Uloga</th>
+    </tr>
+    <tr *ngFor="let user of userService.users">
+        <td >{{user.username}}</td>
+        <td >{{user.ime}}</td>
+        <td >{{user.prezime}}</td>
+        <td >{{user.role}}</td>
+        <td colspan="2">
+            <button mat-fab color="primary" (click)="edit(user)">edit
+            </button>
+            <button mat-fab color="warn" (click)="delete(user)">delete
+            </button>
+        </td>
+    </tr>
+</table>

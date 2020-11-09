@@ -1,0 +1,11 @@
+<mat-sidenav-content> 
+    <mat-form-field appearance="fill">
+      <mat-label>Film:</mat-label>
+      <input matInput placeholder="Pretraga filma" type="text" [(ngModel)]="search">
+    </mat-form-field>
+    <button mat-icon-button (click)="Pretrazi()"><mat-icon>search</mat-icon></button>
+
+    <div *ngIf="movies" class="movie-card">
+      <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+    </div>    
+  </mat-sidenav-content>

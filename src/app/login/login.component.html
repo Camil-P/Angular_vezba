@@ -1,0 +1,33 @@
+<div id="container">
+    <h1 id="naslov">{{getTitleTxt}}</h1>
+    <div *ngIf="regProvera">
+        <mat-form-field>
+            <mat-label>Ime:</mat-label>
+            <input matInput [(ngModel)]="korisnik.ime" id="inuser" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Prezime:</mat-label>
+            <input matInput [(ngModel)]="korisnik.prezime" id="inuser" type="text">
+        </mat-form-field>
+    </div>
+    <mat-form-field>
+        <mat-label>Username:</mat-label>
+        <input matInput [(ngModel)]="korisnik.username" id="inuser" type="text">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Password:</mat-label>
+        <input matInput [(ngModel)]="korisnik.password" id="inpass" type="password">
+    </mat-form-field>
+    <br>
+    <div *ngIf="regProvera && roleProvera">
+    <mat-radio-group [(ngModel)]="korisnik.role" aria-label="Select an option">
+        <mat-radio-button [value]="rolovi[0]">User</mat-radio-button>
+        <mat-radio-button [value]="rolovi[1]">Administrator</mat-radio-button>
+    </mat-radio-group>
+    </div>
+    <br>
+    <button mat-flat-button color="primary" type="submit" *ngIf="!regProvera" (click)="login()">LOGIN</button>
+    <button mat-flat-button color="primary" type="button" (click)="register()">{{getRegButTxt}}</button>
+</div>
